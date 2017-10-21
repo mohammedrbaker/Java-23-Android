@@ -17,7 +17,7 @@ import java.util.List;
 public class MyDb extends SQLiteOpenHelper {
 
     static String DBName = "otopark";
-    static int DBVersion = 1;
+    static int DBVersion = 3;
     String createTable = "CREATE TABLE ARABA(id TEXT, name TEXT)";
     String selectAllSQL = "SELECT * FROM ARABA";
     String selectByIdSQL = "SELECT * FROM ARABA WHERE ID = %s";
@@ -83,6 +83,6 @@ public class MyDb extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        db.execSQL("DELETE FROM ARABA");
     }
 }
