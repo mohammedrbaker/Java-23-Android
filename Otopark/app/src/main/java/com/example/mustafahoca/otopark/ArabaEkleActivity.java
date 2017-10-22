@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -17,6 +18,16 @@ public class ArabaEkleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_araba_ekle);
         myDb = new MyDb(getApplicationContext());
+//        Button button = (Button) findViewById(R.id.buttonArabaEkle);
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                EditText plaka = (EditText)findViewById(R.id.editTextPlaka);
+//                EditText isim = (EditText)findViewById(R.id.editTextISIM);
+//                myDb.veriEkle(plaka.getText().toString(),isim.getText().toString());
+//                Toast.makeText(ArabaEkleActivity.this, "Veri Ekle", Toast.LENGTH_SHORT).show();
+//            }
+//        });
     }
 
     public void arabaEkle(View view) {

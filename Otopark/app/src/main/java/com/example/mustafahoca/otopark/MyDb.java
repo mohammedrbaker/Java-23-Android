@@ -67,7 +67,7 @@ public class MyDb extends SQLiteOpenHelper {
 
     public void deleteAraba(String id){
         SQLiteDatabase sqLite = super.getWritableDatabase();
-        sqLite.delete("ARABA","Name = ?",new String[]{String.valueOf(id)});
+        sqLite.delete("ARABA","id = ?",new String[]{String.valueOf(id)});
     }
 
 
